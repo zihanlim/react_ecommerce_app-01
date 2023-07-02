@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Navbar.css";
+import "./Navbar.scss";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="wrapper">
-        <div className="Left">
+        <div className="left">
           <div className="item">
             <img src="\img\en.png" alt="Language" />
             <KeyboardArrowDownIcon />
@@ -23,48 +23,53 @@ const Navbar = () => {
           </div>
 
           <div className="item">
-            <Link to="/products/1">Women</Link>
+            <Link className="link" to="/products/1">Women</Link>
           </div>
 
           <div className="item">
-            <Link to="/products/2">Men</Link>
+            <Link className="link" to="/products/2">Men</Link>
           </div>
 
           <div className="item">
-            <Link to="/products/3">Children</Link>
+            <Link className="link" to="/products/3">Children</Link>
           </div>
 
           <div className="item">
-            <Link to="/products/4">Accessories</Link>
+            <Link className="link" to="/products/4">Accessories</Link>
           </div>
         </div>
-      </div>
 
-      <div className="Center">
-        <Link to="/">
-          <img src="\img\LIMZIHANLOGO.png" width="100px" alt="limzihan" />
-        </Link>
-      </div>
+        <div className="center">
+          <Link className="link" to="/">
+            <img
+              className="brandlogo"
+              src="\img\LIMZIHANLOGO.png"
+              alt="limzihan"
+            />
+          </Link>
+        </div>
 
-      <div className="Right">
-        <div className="item">
-          <Link to="/">Homepage</Link>
-        </div>
-        <div className="item">
-          <Link to="/about">About</Link>
-        </div>
-        <div className="item">
-          <Link to="/contact">Contact</Link>
-        </div>
-        <div className="item">
-          <Link to="/stores">Stores</Link>
-        </div>
-        <div className="icons">
-          <SearchIcon />
-          <PersonOutlineOutlinedIcon />
-          <FavoriteBorderOutlinedIcon />
-          <div className="carticon">
-            <ShoppingCartOutlinedIcon />
+        <div className="right">
+          <div className="item">
+            <Link className="link" to="/">Homepage</Link>
+          </div>
+          <div className="item">
+            <Link className="link" to="/about">About</Link>
+          </div>
+          <div className="item">
+            <Link className="link" to="/contact">Contact</Link>
+          </div>
+          <div className="item">
+            <Link className="link" to="/stores">Stores</Link>
+          </div>
+          <div className="icons">
+            <SearchIcon />
+            <PersonOutlineOutlinedIcon />
+            <FavoriteBorderOutlinedIcon />
+            <div className="carticon">
+              <ShoppingCartOutlinedIcon />
+              <span>0</span>
+            </div>
           </div>
         </div>
       </div>

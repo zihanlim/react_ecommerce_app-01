@@ -1,0 +1,77 @@
+.navbar{
+
+    height: 80px;
+
+    .wrapper{
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+      .item{
+        display: flex;
+        align-items: center;
+
+      }
+      .item:visited{
+        color: black;
+      }
+      
+      .left{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 12px;
+      }
+
+      .center{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 12px;
+      }
+
+      .brandlogo{
+        width: 150px;
+      }
+
+      .right{
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 15px;
+        font-size: 12px;
+      }
+      
+      .icons{
+        display: flex;
+        color: darkgrey;
+        cursor: pointer;
+        gap: 15px;
+      
+        .carticon{
+          position: relative;
+          span{
+            font-size: 10px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: darkgrey;
+            color: white;
+            position: absolute;
+            left: 22px;
+            top: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+          }
+        }
+      }
+
+
+  }
+
+
+
