@@ -4,7 +4,7 @@ import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRig
 import "./Slider.scss";
 
 const Slider = () => {
-  const [sliderimg, setSliderimg] = useState(0);
+  const [currentSlide, setCurrentslide] = useState(0);
 
   const data = [
     //define an array called 'data' containing the images to be used in the slider
@@ -13,9 +13,31 @@ const Slider = () => {
     "https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?auto=compress&cs=tinysrgb&w=1600",
   ];
 
+  const prevSlide = () => {
+    switch (currentSlide) {
+      case 0:
+        setCurrentslide(2);
+        break;
+      default:
+        setCurrentslide(currentSlide - 1);
+    }
+    console.log(currentSlide);
+  };
+
+  const nextSlide = () => {
+    switch (currentSlide) {
+      case 2:
+        setCurrentslide(0);
+        break;
+      default:
+        setCurrentslide(currentSlide + 1);
+    }
+    console.log(currentSlide);
+  };
+
   return (
     <div className="slider">
-      <div className="container">
+      <div className="container" style={{transform:'translateX(-${currentSlide*100}vw'}}>
         <img src={data[0]} alt="" />
         <img src={data[1]} alt="" />
         <img src={data[2]} alt="" />
