@@ -1,11 +1,14 @@
 import React from "react";
-import "./Home.scss"
+import "./Home.scss";
 import Slider from "../../components/Slider/Slider";
+import FeatureProducts from "../../components/FeaturedProducts/FeatureProducts";
 
 const Home = () => {
   return (
     <div className="home">
       <Slider />
+      <FeatureProducts type="featured" />
+      <FeatureProducts type="trending" />
     </div>
   );
 };

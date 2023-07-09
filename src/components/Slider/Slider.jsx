@@ -8,15 +8,16 @@ const Slider = () => {
 
   const data = [
     //define an array called 'data' containing the images to be used in the slider
-    "https://images.pexels.com/photos/247204/pexels-photo-247204.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    "https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/10679176/pexels-photo-10679176.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/10677493/pexels-photo-10677493.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/10679207/pexels-photo-10679207.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "https://images.pexels.com/photos/10678362/pexels-photo-10678362.jpeg?auto=compress&cs=tinysrgb&w=1600",
   ];
 
   const prevSlide = () => {
     switch (currentSlide) {
       case 0:
-        setCurrentslide(2);
+        setCurrentslide(3);
         break;
       default:
         setCurrentslide(currentSlide - 1);
@@ -26,7 +27,7 @@ const Slider = () => {
 
   const nextSlide = () => {
     switch (currentSlide) {
-      case 2:
+      case 3:
         setCurrentslide(0);
         break;
       default:
@@ -37,10 +38,14 @@ const Slider = () => {
 
   return (
     <div className="slider">
-      <div className="container" style={{transform:'translateX(-${currentSlide*100}vw'}}>
+      <div
+        className="container"
+        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
+      >
         <img src={data[0]} alt="" />
         <img src={data[1]} alt="" />
         <img src={data[2]} alt="" />
+        <img src={data[3]} alt="" />
       </div>
       <div className="icons">
         <div className="icon" onClick={prevSlide}>
