@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
